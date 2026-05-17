@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import "@fontsource/cormorant-garamond/600.css";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
 
@@ -36,7 +37,8 @@ export default function Products({ products, onOrder }) {
             </span>
             <h2
               data-testid="products-title"
-              className="font-serif-display text-4xl sm:text-5xl lg:text-6xl text-[#2C1E16] leading-[1.05] mt-4 max-w-2xl"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+              className="text-4xl sm:text-5xl lg:text-6xl text-[#2C1E16] leading-[1.05] mt-4 max-w-2xl"
             >
               Med i pčelinji proizvodi <br />
               <span className="italic text-[#5A4232]">iz srca prirode.</span>
@@ -47,7 +49,6 @@ export default function Products({ products, onOrder }) {
             dodataka, bez industrijske obrade.
           </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {products.map((p, i) => (
             <motion.article
@@ -70,7 +71,10 @@ export default function Products({ products, onOrder }) {
                 </span>
               </div>
               <div className="p-7 flex flex-col flex-1">
-                <h3 className="font-serif-display text-2xl text-[#2C1E16] tracking-tight">
+                <h3
+                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  className="text-2xl text-[#2C1E16] tracking-tight"
+                >
                   {p.name}
                 </h3>
                 <p className="text-[#5A4232] text-sm leading-relaxed mt-3 flex-1">
@@ -81,7 +85,10 @@ export default function Products({ products, onOrder }) {
                     <div className="text-[10px] tracking-[0.22em] uppercase text-[#5A4232]">
                       Cena
                     </div>
-                    <div className="font-serif-display text-2xl text-[#2C1E16] mt-0.5">
+                    <div
+                      style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                      className="text-2xl text-[#2C1E16] mt-0.5"
+                    >
                       {p.price}
                     </div>
                   </div>
