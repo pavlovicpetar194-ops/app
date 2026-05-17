@@ -49,7 +49,8 @@ export default function Products({ products, onOrder }) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {products.map((p, i) => (
+          {Array.isArray(products) &&
+          products.map((p, i) => (
             <motion.article
               key={p.id}
               data-testid={`product-card-${p.id}`}
