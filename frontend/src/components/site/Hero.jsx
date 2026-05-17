@@ -12,7 +12,7 @@ export default function Hero({ onScrollTo }) {
     >
       <img
         src={HERO_IMAGE}
-        alt="Med koji se sliva sa saća"
+        alt="Pčele na ramu saća ispred polja uljane repice"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 hero-overlay" />

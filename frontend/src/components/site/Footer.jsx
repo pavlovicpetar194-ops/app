@@ -32,7 +32,7 @@ export default function Footer({ onNav }) {
             </div>
             <p className="mt-5 text-sm leading-relaxed max-w-md text-[#FDFBF7]/65">
               Porodično pčelarstvo iz Lazarevca, Srbija. Prirodan med — bagremov,
-              suncokretov i livadski — brano sa pažnjom i ljubavlju, direktno iz
+              suncokretov i cvetni — brano sa pažnjom i ljubavlju, direktno iz
               naših košnica.
             </p>
             <div className="flex items-center gap-3 mt-6">
