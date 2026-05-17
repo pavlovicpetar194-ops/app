@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import About from "@/components/site/About";
@@ -13,8 +11,35 @@ import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const PRODUCTS = [
+  {
+    id: "bagremov-med",
+    name: "Bagremov med",
+    description: "Svetli, bistro zlatni med sa cvetova bagrema. Nežnog ukusa i dugotrajne tečnosti — savršen za čaj, doručak i svakodnevnu upotrebu.",
+    price: "1.200 RSD",
+    weight: "1kg",
+    image: "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/bagremov.png",
+    imagePosition: "center",
+  },
+  {
+    id: "suncokretov-med",
+    name: "Suncokretov med",
+    description: "Bogat, žarko žuti med sa polja suncokreta. Karakterističnog, punog ukusa — brzo kristališe, što je znak prirodnosti.",
+    price: "1.000 RSD",
+    weight: "1kg",
+    image: "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/suncokretov.png",
+    imagePosition: "center",
+  },
+  {
+    id: "cvetni-med",
+    name: "Cvetni med",
+    description: "Cvetni (vrcani) med sa raznovrsnih livadskih cvetova okoline Lazarevca. Topla zlatna boja, balansiran i mirisan ukus.",
+    price: "1.000 RSD",
+    weight: "1kg",
+    image: "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/9stvciqb_df09757a-d054-49be-9e57-96123b165df2.png",
+    imagePosition: "center",
+  },
+];
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -22,23 +47,7 @@ const scrollTo = (id) => {
 };
 
 function HomePage() {
-  const [products, setProducts] = useState([]);
   const [prefillProduct, setPrefillProduct] = useState(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const res = await axios.get(`${API}/products`);
-        if (!cancelled) setProducts(res.data || []);
-      } catch (e) {
-        console.error("Failed to load products", e);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   const handleOrder = (product) => {
     setPrefillProduct({ ...product, _ts: Date.now() });
@@ -51,7 +60,7 @@ function HomePage() {
       <main>
         <Hero onScrollTo={scrollTo} />
         <About />
-        <Products products={products} onOrder={handleOrder} />
+        <Products products={PRODUCTS} onOrder={handleOrder} />
         <Benefits />
         <Testimonials />
         <Contact
