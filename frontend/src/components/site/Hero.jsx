@@ -47,7 +47,7 @@ export default function Hero({ onScrollTo }) {
           data-testid="hero-subtitle"
         >
           Kvalitetan domaći med iz porodice Pavlović — bagremov, suncokretov i
-          livadski. Brano sa ljubavlju, čuvano sa pažnjom.
+          cvetni. Brano sa ljubavlju, čuvano sa pažnjom.
         </motion.p>
 
         <motion.div

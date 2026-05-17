@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { LOGO_URL } from "../../lib/site-data";
 
 const links = [
   { id: "pocetna", label: "Početna" },
   { id: "o-nama", label: "O nama" },
   { id: "proizvodi", label: "Proizvodi" },
   { id: "benefiti", label: "Zašto naš med" },
-  { id: "galerija", label: "Galerija" },
   { id: "utisci", label: "Utisci" },
   { id: "kontakt", label: "Kontakt" },
 ];
@@ -40,11 +40,15 @@ export default function Navbar() {
         <button
           data-testid="nav-logo"
           onClick={() => handleNav("pocetna")}
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
           aria-label="Pavlovića med - Početna"
         >
-          <span className="w-9 h-9 rounded-full grid place-items-center bg-[#E5A93D] text-[#2C1E16] font-serif-display text-xl font-semibold shadow-sm">
-            P
+          <span className="w-14 h-14 rounded-full grid place-items-center bg-[#FDFBF7] border border-[#E5DCC5] shadow-sm overflow-hidden">
+            <img
+              src={LOGO_URL}
+              alt="Pavlovića med logo"
+              className="w-12 h-12 object-contain"
+            />
           </span>
           <span
             className={`font-serif-display text-xl tracking-tight ${

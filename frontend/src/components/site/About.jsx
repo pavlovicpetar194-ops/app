@@ -1,15 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ABOUT_IMAGES } from "../../lib/site-data";
+import { ABOUT_IMAGES, LOGO_URL } from "../../lib/site-data";
 
 export default function About() {
   return (
     <section
       id="o-nama"
       data-testid="about-section"
-      className="relative py-24 sm:py-32 honey-radial"
+      className="relative py-24 sm:py-32 honey-radial overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <img
+        src={LOGO_URL}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -right-20 -top-10 w-[480px] opacity-[0.05] hidden lg:block"
+      />
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center relative">
         {/* Left: images */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

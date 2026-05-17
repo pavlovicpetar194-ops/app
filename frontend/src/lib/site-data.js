@@ -8,7 +8,11 @@ export const BRAND = {
 
 // User-supplied photography
 export const HERO_IMAGE =
-  "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/be1248120e7e6d31e8f34ed9488c9b7cfb936396500be31bc5657dfe5db74e45.png";
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/rb99sztq_491443440_18382711222139526_6310994241156140379_n.webp";
+
+// Pavlovića med logo (brown lines on white)
+export const LOGO_URL =
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/9stvciqb_df09757a-d054-49be-9e57-96123b165df2.png";
 
 export const ABOUT_IMAGES = [
   // Beekeeper (Image 4) - primary

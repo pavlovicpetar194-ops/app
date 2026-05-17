@@ -8,7 +8,6 @@ import Hero from "@/components/site/Hero";
 import About from "@/components/site/About";
 import Products from "@/components/site/Products";
 import Benefits from "@/components/site/Benefits";
-import Gallery from "@/components/site/Gallery";
 import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
@@ -54,7 +53,6 @@ function HomePage() {
         <About />
         <Products products={products} onOrder={handleOrder} />
         <Benefits />
-        <Gallery />
         <Testimonials />
         <Contact
           prefillProduct={prefillProduct}

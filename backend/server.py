@@ -121,12 +121,12 @@ PRODUCTS = [
         "imagePosition": "center",
     },
     {
-        "id": "livadski-med",
-        "name": "Livadski med",
-        "description": "Cvetni med sa raznovrsnih livadskih cvetova okoline Lazarevca. Topla zlatna boja, balansiran i mirisan ukus.",
+        "id": "cvetni-med",
+        "name": "Cvetni med",
+        "description": "Cvetni (vrcani) med sa raznovrsnih livadskih cvetova okoline Lazarevca. Topla zlatna boja, balansiran i mirisan ukus.",
         "price": "1.000 RSD",
         "weight": "1kg",
-        "image": "/api/static/products/livadski.png",
+        "image": "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/ld8g1jbk_image.png",
         "imagePosition": "center",
     },
 ]

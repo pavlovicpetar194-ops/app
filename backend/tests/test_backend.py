@@ -1,4 +1,10 @@
-"""Backend API tests for Pavlovića med honey site (iteration 2)."""
+"""Backend API tests for Pavlovića med honey site (iteration 3).
+
+Iteration 3 changes:
+- Product 'livadski-med' renamed to 'cvetni-med' and now uses external
+  customer-assets image URL (no longer served as /api/static/products/livadski.png).
+- Bagremov and Suncokretov still served from /api/static.
+"""
 import os
 import requests
 import pytest
@@ -15,7 +21,7 @@ def test_root_message():
     assert "Pčelarstvo" in data.get("message", "")
 
 
-# Products — must be exactly 3 with new IDs, prices, weight, and image paths
+# Products — must be exactly 3 with new IDs (cvetni-med replaces livadski-med)
 def test_products_list_count_and_ids():
     r = requests.get(f"{API}/products", timeout=20)
     assert r.status_code == 200
@@ -23,7 +29,9 @@ def test_products_list_count_and_ids():
     assert isinstance(items, list)
     assert len(items) == 3, f"Expected 3 products, got {len(items)}"
     ids = {p["id"] for p in items}
-    assert ids == {"bagremov-med", "suncokretov-med", "livadski-med"}, ids
+    assert ids == {"bagremov-med", "suncokretov-med", "cvetni-med"}, ids
+    # livadski-med must NOT be present
+    assert "livadski-med" not in ids
 
 
 def test_products_fields_and_prices():
@@ -44,22 +52,34 @@ def test_products_fields_and_prices():
     assert sun["weight"] == "1kg"
     assert sun["image"] == "/api/static/products/suncokretov.png"
 
-    # Livadski 1.000 RSD
-    liv = items["livadski-med"]
-    assert liv["name"] == "Livadski med"
-    assert liv["price"] == "1.000 RSD"
-    assert liv["weight"] == "1kg"
-    assert liv["image"] == "/api/static/products/livadski.png"
+    # Cvetni 1.000 RSD - uses external customer-assets URL
+    cv = items["cvetni-med"]
+    assert cv["name"] == "Cvetni med"
+    assert cv["price"] == "1.000 RSD"
+    assert cv["weight"] == "1kg"
+    assert cv["image"].startswith("https://customer-assets.emergentagent.com/"), cv["image"]
+    assert cv["image"].endswith(".png") or "image" in cv["image"]
 
 
-# Static product images
-@pytest.mark.parametrize("name", ["bagremov.png", "suncokretov.png", "livadski.png"])
+def test_cvetni_image_url_reachable():
+    """The external cvetni image URL should be reachable (HEAD or GET)."""
+    r = requests.get(f"{API}/products", timeout=20)
+    items = {p["id"]: p for p in r.json()}
+    url = items["cvetni-med"]["image"]
+    img = requests.get(url, timeout=20)
+    assert img.status_code == 200, f"{url} -> {img.status_code}"
+    ct = img.headers.get("content-type", "")
+    assert ct.startswith("image/"), f"unexpected content-type: {ct}"
+
+
+# Static product images — only bagremov + suncokretov are referenced now.
+@pytest.mark.parametrize("name", ["bagremov.png", "suncokretov.png"])
 def test_static_product_image_served(name):
     url = f"{API}/static/products/{name}"
     r = requests.get(url, timeout=20)
     assert r.status_code == 200, f"{url} -> {r.status_code}"
     assert r.headers.get("content-type", "").startswith("image/png"), r.headers.get("content-type")
-    assert len(r.content) > 1000  # not an empty/error response
+    assert len(r.content) > 1000
 
 
 # Contact create
@@ -105,7 +125,7 @@ def test_contact_missing_message_returns_422():
 
 # Contact list (persistence + no _id)
 def test_contact_list_persistence_and_no_mongo_id():
-    seed = {"name": "TEST_Seed2", "email": "seed2@test.rs", "message": "TEST_seed2"}
+    seed = {"name": "TEST_Seed3", "email": "seed3@test.rs", "message": "TEST_seed3"}
     cr = requests.post(f"{API}/contact", json=seed, timeout=20)
     assert cr.status_code == 200
     new_id = cr.json()["id"]
