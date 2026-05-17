@@ -1,20 +1,35 @@
-// Static content for Pčelarstvo site (Serbian)
+// Static content for Pavlovića med site (Serbian)
+// Brand: Porodica Pavlović — Lazarevac, Srbija
 
+export const BRAND = {
+  name: "Pavlovića med",
+  tagline: "Porodično pčelarstvo · Lazarevac",
+};
+
+// User-supplied photography
 export const HERO_IMAGE =
   "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/be1248120e7e6d31e8f34ed9488c9b7cfb936396500be31bc5657dfe5db74e45.png";
 
 export const ABOUT_IMAGES = [
-  "https://images.unsplash.com/photo-1549269459-ba9e31874ef2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxiZWVrZWVwZXIlMjBuYXR1cmV8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-  "https://images.unsplash.com/photo-1647427062468-74ff21e8934f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxiZWVzJTIwaG9uZXljb21ifGVufDB8fHx8MTc3OTAxODE3Nnww&ixlib=rb-4.1.0&q=85",
+  // Beekeeper (Image 4) - primary
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/afniitvz_640183955_18575383441063769_345830137850237864_n.jpg",
+  // Three jars with flowers (Image 3) - secondary
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/b6gp4u61_629168925_18360387775163744_6111926674496586948_n.jpg",
 ];
 
 export const GALLERY_IMAGES = [
-  "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/c98542ec11be99722969bcd38d4c48faa6ddf8b33f635113f7a279db742c5264.png",
+  // Beekeeper holding frame (Image 4)
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/afniitvz_640183955_18575383441063769_345830137850237864_n.jpg",
+  // Bees on frame + rapeseed (Image 2)
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/l2wpojfv_491443440_18382711222139526_6310994241156140379_n.webp",
+  // Three jars stacked with flowers (Image 3)
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/b6gp4u61_629168925_18360387775163744_6111926674496586948_n.jpg",
+  // Two jars on wood (Image 1)
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/7iuhy7l2_639493868_18442419529128269_642741486766512758_n.webp",
+  // Stock - honey closeup for variety
   "https://images.unsplash.com/photo-1623018697148-8350cf18e64e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxiZWVzJTIwaG9uZXljb21ifGVufDB8fHx8MTc3OTAxODE3Nnww&ixlib=rb-4.1.0&q=85",
+  // Stock - nature/honey
   "https://images.unsplash.com/photo-1555773419-9f97a6f48320?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHw0fHxiZWVrZWVwZXIlMjBuYXR1cmV8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-  "https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-  "https://images.unsplash.com/photo-1587049352851-8d4e89133924?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-  "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
 ];
 
 export const BENEFITS = [
@@ -31,7 +46,7 @@ export const BENEFITS = [
   {
     icon: "Home",
     title: "Domaća proizvodnja",
-    desc: "Mali porodični pogon iz srca Srbije.",
+    desc: "Porodični pogon iz Lazarevca, Srbija.",
   },
   {
     icon: "Sparkles",
@@ -47,34 +62,37 @@ export const BENEFITS = [
 
 export const TESTIMONIALS = [
   {
-    name: "Jelena P.",
+    name: "Milica Đorđević",
     location: "Beograd",
     text:
-      "Bagremov med je toliko nežan i mirisan da ga ujutru jedem samo sa kašikom. Kvalitet kakav se retko nađe u prodavnici.",
+      "Bagremov med iz porodice Pavlović je najlepši koji sam probala — nežan, bistro zlatne boje. Naručujem redovno već dve godine.",
   },
   {
-    name: "Marko S.",
+    name: "Nemanja Stanković",
+    location: "Lazarevac",
+    text:
+      "Komšije smo i znam koliko pažnje ulažu u svaki ram. Suncokretov med je čist, ujednačen, a ukus pravi domaći. Sve preporuke.",
+  },
+  {
+    name: "Sanja Vasić",
     location: "Novi Sad",
     text:
-      "Naručujem već treći put. Pakovanje brižljivo, ukus vrhunski, a kontakt sa pčelarom uvek topao i ljudski.",
+      "Dolazi pakovano kao poklon — uredno, čisto, sa ljubavlju. Cvetni med jedem ujutru sa kašikom i osećam razliku u odnosu na sve iz prodavnica.",
   },
   {
-    name: "Ana M.",
-    location: "Niš",
-    text:
-      "Propolis i polen su nam postali deo svakodnevice. Cela porodica oseća razliku. Hvala na trudu i poštenju.",
-  },
-  {
-    name: "Vladimir K.",
+    name: "Goran Mitrović",
     location: "Kragujevac",
     text:
-      "Šumski med ima karakter koji nigde drugde nisam našao. Ozbiljan, dubok ukus. Preporuka iz srca.",
+      "Naručio sam svo troje. Brz odgovor, brza isporuka, a kvalitet meda zaista vrhunski. Pavlovići znaju svoj zanat.",
   },
 ];
 
 export const CONTACT_INFO = {
-  phone: "+381 6X XXX XXXX",
-  email: "info@pcelarstvo.rs",
-  instagram: "@pcelarstvo",
-  location: "Selo X, Srbija",
+  phone: "063 432 016",
+  phoneHref: "tel:+381634320016",
+  email: "zeks75@gmail.com",
+  instagram: "@honey_of_pavlovich_family",
+  instagramHref: "https://www.instagram.com/honey_of_pavlovich_family/",
+  location: "Lazarevac, Srbija",
+  address: "ul. Dušana Petrovića-Šaneta 4, Lazarevac",
 };

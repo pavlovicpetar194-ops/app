@@ -64,9 +64,9 @@ export default function Contact({ prefillProduct, onClearPrefill }) {
   };
 
   const infoItems = [
-    { icon: Phone, label: "Telefon", value: CONTACT_INFO.phone, href: `tel:${CONTACT_INFO.phone}` },
+    { icon: Phone, label: "Telefon", value: CONTACT_INFO.phone, href: CONTACT_INFO.phoneHref },
     { icon: Mail, label: "Email", value: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}` },
-    { icon: Instagram, label: "Instagram", value: CONTACT_INFO.instagram, href: "#" },
+    { icon: Instagram, label: "Instagram", value: CONTACT_INFO.instagram, href: CONTACT_INFO.instagramHref },
     { icon: MapPin, label: "Lokacija", value: CONTACT_INFO.location, href: "#" },
   ];
 

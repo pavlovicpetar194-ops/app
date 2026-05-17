@@ -75,8 +75,9 @@ export default function About() {
             className="text-[#5A4232] text-base sm:text-lg leading-relaxed mt-6 max-w-xl"
           >
             Naše pčelarstvo se zasniva na tradiciji, kvalitetu i ljubavi prema
-            prirodi. Svaka tegla meda dolazi direktno iz naših košnica i
-            proizvodi se bez dodataka i industrijske obrade.
+            prirodi. Porodica Pavlović iz Lazarevca već dve decenije proizvodi
+            med direktno iz svojih košnica — bez dodataka, bez industrijske
+            obrade.
           </p>
           <p className="text-[#5A4232] text-base sm:text-lg leading-relaxed mt-4 max-w-xl">
             Pratimo svaku pčelu, svaki cvet i svaki ram saća — jer verujemo da
@@ -84,13 +85,13 @@ export default function About() {
             iskreno.
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
+          <div className="mt-10 grid grid-cols-2 gap-6 max-w-sm">
             <div data-testid="stat-1">
               <div className="font-serif-display text-3xl text-[#2C1E16]">
-                40+
+                20+
               </div>
               <div className="text-xs tracking-[0.18em] uppercase text-[#5A4232] mt-1">
-                košnica
+                godina iskustva
               </div>
             </div>
             <div data-testid="stat-2">
@@ -99,14 +100,6 @@ export default function About() {
               </div>
               <div className="text-xs tracking-[0.18em] uppercase text-[#5A4232] mt-1">
                 prirodno
-              </div>
-            </div>
-            <div data-testid="stat-3">
-              <div className="font-serif-display text-3xl text-[#2C1E16]">
-                1.000+
-              </div>
-              <div className="text-xs tracking-[0.18em] uppercase text-[#5A4232] mt-1">
-                porodica
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ export default function Navbar() {
           data-testid="nav-logo"
           onClick={() => handleNav("pocetna")}
           className="flex items-center gap-2 group"
-          aria-label="Pčelarstvo - Početna"
+          aria-label="Pavlovića med - Početna"
         >
           <span className="w-9 h-9 rounded-full grid place-items-center bg-[#E5A93D] text-[#2C1E16] font-serif-display text-xl font-semibold shadow-sm">
             P
@@ -51,7 +51,7 @@ export default function Navbar() {
               scrolled ? "text-[#2C1E16]" : "text-white"
             }`}
           >
-            Pčelarstvo
+            Pavlovića med
           </span>
         </button>
 

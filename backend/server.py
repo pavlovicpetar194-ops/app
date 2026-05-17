@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -104,42 +105,29 @@ PRODUCTS = [
     {
         "id": "bagremov-med",
         "name": "Bagremov med",
-        "description": "Svetli, blagi med sa cvetova bagrema. Nežnog ukusa, savršen za svakodnevnu upotrebu i čaj.",
+        "description": "Svetli, bistro zlatni med sa cvetova bagrema. Nežnog ukusa i dugotrajne tečnosti — savršen za čaj, doručak i svakodnevnu upotrebu.",
         "price": "1.200 RSD",
-        "weight": "720g",
-        "image": "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/6dc443831ae9764a463bbeba8baab496f054a222d3f1e76f89264145020faa5c.png",
+        "weight": "1kg",
+        "image": "/api/static/products/bagremov.png",
+        "imagePosition": "center",
+    },
+    {
+        "id": "suncokretov-med",
+        "name": "Suncokretov med",
+        "description": "Bogat, žarko žuti med sa polja suncokreta. Karakterističnog, punog ukusa — brzo kristališe, što je znak prirodnosti.",
+        "price": "1.000 RSD",
+        "weight": "1kg",
+        "image": "/api/static/products/suncokretov.png",
+        "imagePosition": "center",
     },
     {
         "id": "livadski-med",
         "name": "Livadski med",
-        "description": "Bogat med sa raznih livadskih cvetova. Karakterističan, pun ukus i topla zlatna boja.",
-        "price": "1.100 RSD",
-        "weight": "720g",
-        "image": "https://images.unsplash.com/photo-1587049352851-8d4e89133924?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-    },
-    {
-        "id": "sumski-med",
-        "name": "Šumski med",
-        "description": "Taman, izrazito aromatičan med iz šumskih predela. Snažan, mineralno bogat profil.",
-        "price": "1.400 RSD",
-        "weight": "720g",
-        "image": "https://images.unsplash.com/photo-1718146921295-700b969e7c78?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-    },
-    {
-        "id": "propolis",
-        "name": "Propolis",
-        "description": "Prirodna propolisova tinktura. Tradicionalno korišćena za jačanje organizma.",
-        "price": "900 RSD",
-        "weight": "30ml",
-        "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
-    },
-    {
-        "id": "polen",
-        "name": "Polen",
-        "description": "Sveže ubran cvetni polen. Prirodan izvor proteina, vitamina i minerala.",
-        "price": "1.300 RSD",
-        "weight": "250g",
-        "image": "https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Cvetni med sa raznovrsnih livadskih cvetova okoline Lazarevca. Topla zlatna boja, balansiran i mirisan ukus.",
+        "price": "1.000 RSD",
+        "weight": "1kg",
+        "image": "/api/static/products/livadski.png",
+        "imagePosition": "center",
     },
 ]
 
@@ -151,6 +139,11 @@ async def get_products():
 
 # Include router
 app.include_router(api_router)
+
+# Mount static files (product images) under /api/static
+STATIC_DIR = ROOT_DIR / "static"
+STATIC_DIR.mkdir(parents=True, exist_ok=True)
+app.mount("/api/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 app.add_middleware(
     CORSMiddleware,

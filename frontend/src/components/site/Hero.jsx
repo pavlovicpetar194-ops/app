@@ -25,7 +25,7 @@ export default function Hero({ onScrollTo }) {
           className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-xs sm:text-sm tracking-[0.18em] uppercase font-medium"
           data-testid="hero-tagline"
         >
-          Porodično pčelarstvo · Srbija
+          Porodično pčelarstvo · Lazarevac, Srbija
         </motion.span>
 
         <motion.h1
@@ -46,8 +46,8 @@ export default function Hero({ onScrollTo }) {
           className="text-white/85 text-base sm:text-lg max-w-xl mt-6 leading-relaxed"
           data-testid="hero-subtitle"
         >
-          Kvalitetan domaći med i pčelinji proizvodi iz porodičnog pčelarstva.
-          Brano sa ljubavlju, čuvano sa pažnjom.
+          Kvalitetan domaći med iz porodice Pavlović — bagremov, suncokretov i
+          livadski. Brano sa ljubavlju, čuvano sa pažnjom.
         </motion.p>
 
         <motion.div

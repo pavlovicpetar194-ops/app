@@ -2,6 +2,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+
+const resolveImage = (src) => {
+  if (!src) return "";
+  if (src.startsWith("http")) return src;
+  return `${BACKEND_URL}${src}`;
+};
+
+const positionClass = (pos) => {
+  switch (pos) {
+    case "left":
+      return "object-left";
+    case "right":
+      return "object-right";
+    default:
+      return "object-center";
+  }
+};
+
 export default function Products({ products, onOrder }) {
   return (
     <section
@@ -42,9 +61,9 @@ export default function Products({ products, onOrder }) {
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-[#F2EAE0]">
                 <img
-                  src={p.image}
+                  src={resolveImage(p.image)}
                   alt={p.name}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]"
+                  className={`absolute inset-0 w-full h-full object-cover ${positionClass(p.imagePosition)} group-hover:scale-105 transition-transform duration-[1200ms]`}
                 />
                 <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] tracking-[0.18em] uppercase bg-white/90 text-[#2C1E16] font-semibold backdrop-blur">
                   {p.weight}

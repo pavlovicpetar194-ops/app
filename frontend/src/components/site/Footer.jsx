@@ -24,16 +24,19 @@ export default function Footer({ onNav }) {
                 P
               </span>
               <span className="font-serif-display text-2xl text-[#FDFBF7] tracking-tight">
-                Pčelarstvo
+                Pavlovića med
               </span>
             </div>
             <p className="mt-5 text-sm leading-relaxed max-w-md text-[#FDFBF7]/65">
-              Porodično pčelarstvo iz Srbije. Prirodan med i pčelinji proizvodi
-              brani sa pažnjom i ljubavlju, direktno iz naših košnica.
+              Porodično pčelarstvo iz Lazarevca, Srbija. Prirodan med — bagremov,
+              suncokretov i livadski — brano sa pažnjom i ljubavlju, direktno iz
+              naših košnica.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="#"
+                href={CONTACT_INFO.instagramHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-testid="footer-social-instagram"
                 aria-label="Instagram"
                 className="w-10 h-10 rounded-full grid place-items-center border border-[#FDFBF7]/15 hover:bg-[#E5A93D] hover:text-[#2C1E16] hover:border-[#E5A93D] transition-colors"
@@ -103,7 +106,7 @@ export default function Footer({ onNav }) {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
           <p className="text-xs text-[#FDFBF7]/50 tracking-wide">
-            © {new Date().getFullYear()} Pčelarstvo. Sva prava zadržana.
+            © {new Date().getFullYear()} Pavlovića med. Sva prava zadržana.
           </p>
           <p className="text-xs text-[#FDFBF7]/40 tracking-wide italic font-serif-display">
             Med iz srca prirode.
