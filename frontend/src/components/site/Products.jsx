@@ -22,7 +22,7 @@ const positionClass = (pos) => {
   }
 };
 
-export default function Products({ products, onOrder }) {
+export default function Products({ products = [], onOrder }) {
   return (
     <section
       id="proizvodi"
