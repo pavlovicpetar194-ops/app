@@ -10,9 +10,9 @@ export const BRAND = {
 export const HERO_IMAGE =
   "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/rb99sztq_491443440_18382711222139526_6310994241156140379_n.webp";
 
-// Pavlovića med logo (brown lines on white)
+// Pavlovića med logo (brown bee + honeycomb mark)
 export const LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/ld8g1jbk_image.png";
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/zfrdea31_WhatsApp%20Image%202026-05-17%20at%2015.17.36%20%282%29%20%281%29.jpeg";
 
 export const ABOUT_IMAGES = [
   // Beekeeper (Image 4) - primary
