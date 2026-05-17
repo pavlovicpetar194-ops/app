@@ -1,0 +1,91 @@
+{
+  "theme": "LIGHT",
+  "archetype": "1 (Organic & Earthy, with Luxury Premium influence)",
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#F2EAE0",
+    "primary": "#E5A93D",
+    "primary_foreground": "#2C1E16",
+    "text_main": "#2C1E16",
+    "text_muted": "#5A4232",
+    "border": "#E5DCC5",
+    "accent_gold": "#D48B1B"
+  },
+  "typography": {
+    "headings": "Cormorant Garamond",
+    "body": "Manrope",
+    "notes": "Use tracking-tight for headings. H1 max text-5xl to text-6xl. Use variable weights to add elegance."
+  },
+  "layout": {
+    "spacing": "Generous spacing. p-8, py-20, py-32 for sections.",
+    "border_radius": "Subtle rounded corners (rounded-lg to rounded-2xl) to mimic organic softness, but not overly pill-shaped.",
+    "container": "Max-width containers, padded on mobile."
+  },
+  "components": {
+    "buttons": "Shadcn based. Primary: bg-[#E5A93D] text-[#2C1E16] hover:bg-[#D48B1B] font-medium tracking-wide. Secondary: border border-[#E5A93D] text-[#2C1E16] hover:bg-[#E5A93D]/10.",
+    "cards": "Flat surfaces with subtle 1px border (#E5DCC5), no heavy shadows. hover:shadow-lg hover:-translate-y-1 transition-all duration-300. bg-white or bg-[#FDFBF7]",
+    "header": "Sticky with Glassmorphism: bg-white/70 backdrop-blur-md border-b border-[#E5DCC5].",
+    "inputs": "Shadcn input/textarea but customized with rounded-md, border-[#E5DCC5], focus:ring-[#E5A93D]."
+  },
+  "sections": [
+    {
+      "name": "Hero",
+      "design": "Full height (min-h-[90vh]). Background image with cinematic gradient overlay to ensure text contrast. Overlay: bg-black/40. Text aligned left or center with generous leading.",
+      "content": {
+        "title": "Prirodni med direktno iz košnice",
+        "subtitle": "Kvalitetan domaći med i pčelinji proizvodi iz porodičnog pčelarstva.",
+        "ctas": ["Kupi med", "Saznaj više"]
+      }
+    },
+    {
+      "name": "About",
+      "design": "Asymmetric bento/grid layout. Large image of beekeeper and smaller image of honeycomb overlapping. High negative space."
+    },
+    {
+      "name": "Products",
+      "design": "3-column grid for desktop. Cardless look or subtle border cards. Product image on top with light background behind it.",
+      "items": ["Bagremov med", "Livadski med", "Šumski med", "Propolis", "Polen"]
+    },
+    {
+      "name": "Benefits",
+      "design": "Grid of small info cards with Lucide icons (Leaf, Heart, Sun, Droplet, Shield). Colors: #E5A93D icons.",
+      "items": ["100% prirodno", "Bez aditiva", "Domaća proizvodnja", "Bogat ukus", "Direktno od pčelara"]
+    },
+    {
+      "name": "Gallery",
+      "design": "Bento grid of 4-5 images. Use mixed aspect ratios (tall, wide, square). Gap-4 or gap-6."
+    },
+    {
+      "name": "Testimonials",
+      "design": "Simple elegant quotes. Use italic Cormorant Garamond for the quote text."
+    },
+    {
+      "name": "Contact",
+      "design": "Two columns: Contact info (Address, Phone, Email, Insta) on left, Form on right."
+    }
+  ],
+  "media": {
+    "hero_bg": "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/be1248120e7e6d31e8f34ed9488c9b7cfb936396500be31bc5657dfe5db74e45.png",
+    "about_images": [
+      "https://images.unsplash.com/photo-1549269459-ba9e31874ef2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxiZWVrZWVwZXIlMjBuYXR1cmV8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1647427062468-74ff21e8934f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxiZWVzJTIwaG9uZXljb21ifGVufDB8fHx8MTc3OTAxODE3Nnww&ixlib=rb-4.1.0&q=85"
+    ],
+    "product_images": [
+      "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/6dc443831ae9764a463bbeba8baab496f054a222d3f1e76f89264145020faa5c.png",
+      "https://images.unsplash.com/photo-1587049352851-8d4e89133924?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1718146921295-700b969e7c78?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85"
+    ],
+    "gallery_images": [
+      "https://static.prod-images.emergentagent.com/jobs/433fc96d-379b-496e-b1e9-64758ac885c1/images/c98542ec11be99722969bcd38d4c48faa6ddf8b33f635113f7a279db742c5264.png",
+      "https://images.unsplash.com/photo-1623018697148-8350cf18e64e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxiZWVzJTIwaG9uZXljb21ifGVufDB8fHx8MTc3OTAxODE3Nnww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1555773419-9f97a6f48320?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHw0fHxiZWVrZWVwZXIlMjBuYXR1cmV8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxob25leSUyMGphciUyMHBvdXJpbmd8ZW58MHx8fHwxNzc5MDE4MTc2fDA&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "technical_instructions": {
+    "dependencies": "lucide-react, framer-motion, clsx, tailwind-merge",
+    "testing": "All interactive elements MUST have data-testid attributes (e.g., data-testid='hero-cta-buy')",
+    "accessibility": "Ensure contrast ratio on text over images. Use aria-labels for icon-only buttons."
+  }
+}
