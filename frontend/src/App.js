@@ -18,7 +18,7 @@ const PRODUCTS = [
     description: "Svetli, bistro zlatni med sa cvetova bagrema. Nežnog ukusa i dugotrajne tečnosti — savršen za čaj, doručak i svakodnevnu upotrebu.",
     price: "1.200 RSD",
     weight: "1kg",
-    image: "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/bagremov.png",
+    image: "/images/bagremov__1_.png",
     imagePosition: "center",
   },
   {
@@ -27,7 +27,7 @@ const PRODUCTS = [
     description: "Bogat, žarko žuti med sa polja suncokreta. Karakterističnog, punog ukusa — brzo kristališe, što je znak prirodnosti.",
     price: "1.000 RSD",
     weight: "1kg",
-    image: "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/suncokretov.png",
+    image: "/images/suncokretov__1_.png",
     imagePosition: "center",
   },
   {
