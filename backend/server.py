@@ -126,7 +126,7 @@ PRODUCTS = [
         "description": "Cvetni (vrcani) med sa raznovrsnih livadskih cvetova okoline Lazarevca. Topla zlatna boja, balansiran i mirisan ukus.",
         "price": "1.000 RSD",
         "weight": "1kg",
-        "image": "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/ld8g1jbk_image.png",
+        "image": "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/9stvciqb_df09757a-d054-49be-9e57-96123b165df2.png",
         "imagePosition": "center",
     },
 ]

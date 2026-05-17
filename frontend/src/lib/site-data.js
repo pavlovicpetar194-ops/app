@@ -12,7 +12,7 @@ export const HERO_IMAGE =
 
 // Pavlovića med logo (brown lines on white)
 export const LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/9stvciqb_df09757a-d054-49be-9e57-96123b165df2.png";
+  "https://customer-assets.emergentagent.com/job_pcelji-zaklon/artifacts/ld8g1jbk_image.png";
 
 export const ABOUT_IMAGES = [
   // Beekeeper (Image 4) - primary
