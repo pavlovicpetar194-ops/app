@@ -30,10 +30,20 @@ Sections: Hero, About, Products (5 items), Benefits, Gallery, Testimonials, Cont
 
 ## Implemented (Dec 2025)
 - All 8 sections built per spec, fully in Serbian.
-- Premium UI: cinematic hero, asymmetric About bento, 5 product cards with prefill-to-contact flow, icon benefits, bento gallery, dark testimonials section, two-column contact, elegant footer.
+- Premium UI: cinematic hero, asymmetric About bento, 3 product cards (Bagremov, Suncokretov, Livadski) with prefill-to-contact flow, icon benefits, bento gallery, dark testimonials section, two-column contact, elegant footer.
 - Smooth scroll navigation, glass navbar, scroll-triggered framer-motion animations.
 - Mobile-first responsive with hamburger menu.
 - Backend tested 100%; Playwright smoke tested 100%.
+
+## Iteration 2 (Dec 2025) — Real brand & assets
+- Brand renamed to **Pavlovića med** (porodica Pavlović, Lazarevac).
+- Real contact info: tel 063 432 016, email zeks75@gmail.com, IG @honey_of_pavlovich_family, Lazarevac.
+- Reduced from 5 to **3 products** (sve 1kg): Bagremov 1.200 RSD, Suncokretov 1.000 RSD, Livadski 1.000 RSD.
+- **AI-generated product jar images** via Gemini Nano Banana (gemini-3.1-flash-image-preview) using user's reference label. Stored in `/app/backend/static/products/*.png` and served via `/api/static/products/*`.
+- About stats reduced to 2 (20+ godina iskustva, 100% prirodno).
+- User-supplied photos (beekeeper, bees on frame + rapeseed, jars on flowers) used in About + Gallery.
+- Realistic Serbian testimonials (Milica Đorđević, Nemanja Stanković, Sanja Vasić, Goran Mitrović).
+- Backend 11/11 + Frontend 13/13 tests pass.
 
 ## Prioritized Backlog
 - **P1** Resend email integration so contact form notifies beekeeper.
